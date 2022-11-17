@@ -5,7 +5,11 @@
 
 SELECT 
 {% if column_list is defined and column_list|length > 0 %}
-{{ column_name }}, {{ column_name_list }}
+{{ column_name }}, 
+    {% for column in column_list %}
+        {{ column }}
+        {% if not loop.last %} , {% endif %}
+    {% endfor %}
 {% else %}
 {{ column_name }}
 {% endif %}
