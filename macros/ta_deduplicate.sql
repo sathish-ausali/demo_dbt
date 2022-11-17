@@ -1,4 +1,4 @@
-{% macro ta_deduplicate(model, column_name, column_list) %}
+{% test ta_deduplicate(model, column_name, column_list) %}
 
 {%- set column_name_list = column_list | list -%}
 {%- set column_length = column_list | length -%}

@@ -1,4 +1,4 @@
-{% macro ta_is_masked(model, column_name, mask, threshold) %}
+{% test ta_is_masked(model, column_name, mask, threshold) %}
 
 
 with cast_validation as (
@@ -25,4 +25,4 @@ validation_error as (
 select *
 from validation_error
 
-{% endmacro %}
+{% endtest %}
