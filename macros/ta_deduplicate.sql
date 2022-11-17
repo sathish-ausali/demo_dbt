@@ -20,4 +20,4 @@ SELECT
 {{ dbt_utils.group_by(1) }}	
 {% endif %}
   HAVING COUNT(*) > 1
-{% endmacro %}
+{% endtest %}
