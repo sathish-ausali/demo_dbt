@@ -1,0 +1,68 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@sathish-ausali 
+datacoves
+/
+ci-basic-action
+Public
+Code
+Issues
+Pull requests
+1
+Actions
+Projects
+Security
+Insights
+ci-basic-action/action.yml
+@ssassi
+ssassi first commit
+Latest commit 43aef8c on Jul 1, 2021
+ History
+ 1 contributor
+24 lines (23 sloc)  540 Bytes
+
+name: "dbt coves action"
+description: "Run and schedule dbt and dbt-coves commands directly in your Github repo"
+author: "Datacoves"
+
+inputs:
+  command:
+    description: "command"
+    default: "dbt run"
+    required: true
+  dbt_project_folder:
+    description: "dbt project folder. Defaults to ."
+    default: "."
+    required: false
+outputs:
+  result:
+    description: "Success or failure of the dbt command"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.command }}
+branding:
+  icon: 'database'  
+  color: 'purple'
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+ci-basic-action/action.yml at main · datacoves/ci-basic-action
